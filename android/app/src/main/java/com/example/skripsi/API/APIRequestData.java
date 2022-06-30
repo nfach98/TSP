@@ -62,6 +62,11 @@ public interface APIRequestData {
     @GET("dataPengiriman/retrivePengiriman.php")
     Call<ResponPengirimanModel> ardRetrievePengiriman();
 
+    @GET("dataPengiriman/retrivePengirimanKurir.php")
+    Call<ResponPengirimanModel> ardRetrievePengirimanKurir(
+            @Query("id_kurir") String idKurir
+    );
+
     @FormUrlEncoded
     @POST("dataPengiriman/createDataPengiriman.php")
     Call<ResponPengirimanModel> ardCreatePengiriman(
@@ -91,6 +96,21 @@ public interface APIRequestData {
             @Field("alamat") String alamat,
             @Field("latitude") double latitude,
             @Field("longitude") double longitude
+    );
+
+    @FormUrlEncoded
+    @POST("dataPengiriman/updatePengirimanKurir.php")
+    Call<ResponModel> ardUpdatePengirimanKurir(
+            @Field("id_kurir") String idKurir,
+            @Field("ids") String ids
+    );
+
+    @FormUrlEncoded
+    @POST("dataPengiriman/updateListPengirimanKurir.php")
+    Call<ResponModel> ardUpdateListPengirimanKurir(
+            @Field("id_kurir") String idKurir,
+            @Field("id_pengiriman") int idPengiriman,
+            @Field("status") int status
     );
 
     @GET("ambilLatLong.php")
