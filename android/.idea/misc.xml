@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_add_pengiriman.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_atur_pengiriman.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_cek_hitung.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_cek_pengiriman.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_data_kurir.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_data_pengiriman.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_detail_perhitungan.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_koor_kurir.xml" value="0.1" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_rute_pengiriman.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_tabel_hitung.xml" value="0.128" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_tambah_data_pengiriman.xml" value="0.176" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/activity_ubah_data_pengiriman.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/card_iterasi.xml" value="0.12360688956433637" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/card_search.xml" value="0.264" />
+        <entry key="..\:/Makaryo/2022/Perhitungan TSP/project skripsi/Skripsi/app/src/main/res/layout/toolbar_hasil.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_data_pengiriman.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_hasil.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_map_kurir.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_navigasi.xml" value="0.20199275362318841" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_navigasi_kurir.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_pick_lokasi.xml" value="0.18" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_pick_lokasi_pengiriman.xml" value="0.17527173913043478" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_tabel_hitung.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_tabel_hitung2.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_tambah_data_pengiriman.xml" value="0.1408514492753623" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/activity_ubah_data_pengiriman.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Lenovo/Documents/2022/project skripsi/Skripsi/app/src/main/res/layout/card_pengiriman_kurir.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/drawable/bg_rounded_top.xml" value="0.108" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/drawable/bgbg.xml" value="0.1" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/drawable/button_style.xml" value="0.1685" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1095" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_admin.xml" value="0.22" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_cek_hitung.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_data_kurir.xml" value="0.1453804347826087" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_data_pengiriman.xml" value="0.13858695652173914" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_hasil.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_koor_kurir.xml" value="0.15896739130434784" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_kurir.xml" value="0.1453804347826087" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_splash_screen.xml" value="0.1453804347826087" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_tabel_hitung.xml" value="0.15896739130434784" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_tambah_data_kurir.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_tambah_data_pengiriman.xml" value="0.1796875" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_ubah_data_kurir.xml" value="0.1453804347826087" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/activity_ubah_data_pengiriman.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/card_hasil_cih.xml" value="0.13994565217391305" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/card_kurir.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/card_latlong.xml" value="0.11684782608695653" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/card_pengiriman.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/layout_row.xml" value="0.1796875" />
+        <entry key="..\:/Users/Mybook14G/AndroidStudioProjects/Skripsi/app/src/main/res/layout/toolbar_hasil.xml" value="0.14130434782608695" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

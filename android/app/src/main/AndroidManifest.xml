@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.skripsi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Skripsi"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Activity.PengirimanActivity.PickLokasiActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Activity.KurirActivity.NavigasiKurirActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" />
+        <activity
+            android:name=".Activity.KurirActivity.MapKurirActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" />
+        <activity
+            android:name=".Activity.KurirActivity.PengirimanKurirActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" >
+        </activity>
+        <activity
+            android:name=".Activity.Koor.RutePengirimanActivity.DetailPerhitunganActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Koor.RutePengirimanActivity.RutePengirimanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Koor.AturPengirimanActivity.CekPengirimanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Koor.AturPengirimanActivity.AddPengirimanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Koor.AturPengirimanActivity.AturPengirimanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Koor.KoorKurir"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.NgitungActivity.CekHitung"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" >
+        </activity>
+        <activity
+            android:name=".Activity.PengirimanActivity.UbahDataPengiriman"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NgitungActivity.Hasil"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NgitungActivity.TabelHitungActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PengirimanActivity.TambahDataPengiriman"
+            android:exported="true"
+            android:label="Data Pengiriman"
+            android:parentActivityName=".Activity.PengirimanActivity.DataPengiriman">
+        </activity>
+        <activity
+            android:name=".Activity.PengirimanActivity.DataPengiriman"
+            android:exported="true"
+            android:label="Data Pengiriman" >
+
+        </activity>
+        <activity
+            android:name=".Activity.UbahDataKurirActivity"
+            android:exported="false"
+            android:label="Data Kurir"
+            android:parentActivityName=".Activity.DataKurirActivity" />
+        <activity
+            android:name=".Activity.TambahDataKurirActivity"
+            android:exported="false"
+            android:label="Data Kurir"
+            android:parentActivityName=".Activity.DataKurirActivity" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" />
+        <activity
+            android:name=".Activity.AdminActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DataKurirActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
