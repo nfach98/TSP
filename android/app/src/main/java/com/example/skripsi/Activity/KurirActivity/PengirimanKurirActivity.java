@@ -98,8 +98,8 @@ public class PengirimanKurirActivity extends AppCompatActivity {
                 adCekHitung.notifyDataSetChanged();
                 adCekHitung.setOnClickListener(new OnClickListener() {
                     @Override
-                    public void onClick(Object data) {
-                    DataPengirimanModel dhm = (DataPengirimanModel) data;
+                    public void onClick(Object... data) {
+                    DataPengirimanModel dhm = (DataPengirimanModel) data[1];
                     Intent intent = new Intent(PengirimanKurirActivity.this, NavigasiKurirActivity.class);
                     Bundle args = new Bundle();
                     int idx = dataHitungList.indexOf(dhm);

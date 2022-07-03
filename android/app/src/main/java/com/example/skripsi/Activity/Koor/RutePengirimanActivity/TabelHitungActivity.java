@@ -1,26 +1,20 @@
-package com.example.skripsi.Activity.NgitungActivity;
+package com.example.skripsi.Activity.Koor.RutePengirimanActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.example.skripsi.Adapter.AdapterHitung;
 import com.example.skripsi.Adapter.AdapterIterasi;
 import com.example.skripsi.Model.HitungModel.DataHitungModel;
 import com.example.skripsi.Model.IterasiModel;
