@@ -4,6 +4,7 @@ public class DataPengirimanModel {
     private int id;
     private String nama, alamat;
     private Double latitude, longitude;
+    private boolean is_selected;
 
     public int getId() {
         return id;
@@ -43,5 +44,13 @@ public class DataPengirimanModel {
 
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
+    }
+
+    public boolean getIsSelected() {
+        return is_selected;
+    }
+
+    public void setIsSelected(boolean isSelected) {
+        this.is_selected = isSelected;
     }
 }

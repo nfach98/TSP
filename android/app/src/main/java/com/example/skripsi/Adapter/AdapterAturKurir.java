@@ -29,13 +29,14 @@ import retrofit2.Response;
 public class AdapterAturKurir extends RecyclerView.Adapter<AdapterAturKurir.HolderAturKurir> {
     private Context ctx;
     private List<DataPengirimanModel> listPengiriman;
-    private List<DataPengirimanModel> listPengiriman2;
+    private List<Integer> listSelected;
     private int idKirim;
     private OnClickListener onClickListener;
 
-    public AdapterAturKurir(Context ctx, List<DataPengirimanModel> listPengiriman) {
+    public AdapterAturKurir(Context ctx, List<DataPengirimanModel> listPengiriman, List<Integer> listSelected) {
         this.ctx = ctx;
         this.listPengiriman = listPengiriman;
+        this.listSelected = listSelected;
     }
 
     public void setOnClickListener(OnClickListener onClickListener){
@@ -58,6 +59,11 @@ public class AdapterAturKurir extends RecyclerView.Adapter<AdapterAturKurir.Hold
         holder.tvNama.setText(dpm.getNama());
         holder.tvAlamat.setText(dpm.getAlamat());
         holder.tvLatLng.setText(dpm.getLatitude() + ", " + dpm.getLatitude());
+        if (listSelected.contains(dpm.getId())) {
+            holder.ivCheck.setVisibility(View.VISIBLE);
+        } else {
+            holder.ivCheck.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -76,7 +82,6 @@ public class AdapterAturKurir extends RecyclerView.Adapter<AdapterAturKurir.Hold
             tvAlamat = itemView.findViewById(R.id.tvAlamat);
             tvLatLng = itemView.findViewById(R.id.tvLatLng);
             ivCheck = itemView.findViewById(R.id.ivCheck);
-
             itemView.setOnClickListener(view -> onClickListener.onClick(id, ivCheck));
         }
 
