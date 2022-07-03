@@ -99,15 +99,15 @@ public interface APIRequestData {
     );
 
     @FormUrlEncoded
-    @POST("dataPengiriman/updatePengirimanKurir.php")
-    Call<ResponModel> ardUpdatePengirimanKurir(
+    @POST("dataPengiriman/updateListPengirimanKurir.php")
+    Call<ResponModel> ardUpdateListPengirimanKurir(
             @Field("id_kurir") String idKurir,
             @Field("ids") String ids
     );
 
     @FormUrlEncoded
-    @POST("dataPengiriman/updateListPengirimanKurir.php")
-    Call<ResponModel> ardUpdateListPengirimanKurir(
+    @POST("dataPengiriman/updatePengirimanKurir.php")
+    Call<ResponModel> ardUpdatePengirimanKurir(
             @Field("id_kurir") String idKurir,
             @Field("id_pengiriman") int idPengiriman,
             @Field("status") int status

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.skripsi">
+    package="com.example.skripsi" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -13,10 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Skripsi"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".Activity.KurirActivity.AturPengirimanKurirActivity"
+            android:exported="false" />
         <activity
             android:name=".Activity.PengirimanActivity.PickLokasiActivity"
-            android:exported="true">
+            android:exported="true" >
         </activity>
         <activity
             android:name=".Activity.KurirActivity.NavigasiKurirActivity"
@@ -52,11 +55,12 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.NgitungActivity.CekHitung"
+            android:name=".Activity.Koor.RutePengirimanActivity.CekHitungActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" >
         </activity>
@@ -64,33 +68,29 @@
             android:name=".Activity.PengirimanActivity.UbahDataPengiriman"
             android:exported="false" />
         <activity
-            android:name=".Activity.NgitungActivity.Hasil"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.NgitungActivity.TabelHitungActivity"
+            android:name=".Activity.Koor.RutePengirimanActivity.TabelHitungActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.PengirimanActivity.TambahDataPengiriman"
             android:exported="true"
             android:label="Data Pengiriman"
-            android:parentActivityName=".Activity.PengirimanActivity.DataPengiriman">
+            android:parentActivityName=".Activity.PengirimanActivity.DataPengiriman" >
         </activity>
         <activity
             android:name=".Activity.PengirimanActivity.DataPengiriman"
             android:exported="true"
             android:label="Data Pengiriman" >
-
         </activity>
         <activity
             android:name=".Activity.UbahDataKurirActivity"
             android:exported="false"
             android:label="Data Kurir"
-            android:parentActivityName=".Activity.DataKurirActivity" />
+            android:parentActivityName=".Activity.KurirActivity.DataKurirActivity" />
         <activity
             android:name=".Activity.TambahDataKurirActivity"
             android:exported="false"
             android:label="Data Kurir"
-            android:parentActivityName=".Activity.DataKurirActivity" />
+            android:parentActivityName=".Activity.KurirActivity.DataKurirActivity" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="false" />
@@ -106,7 +106,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.DataKurirActivity"
+            android:name=".Activity.KurirActivity.DataKurirActivity"
             android:exported="false" />
     </application>
 

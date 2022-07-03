@@ -1,4 +1,4 @@
-package com.example.skripsi.Activity.NgitungActivity;
+package com.example.skripsi.Activity.Koor.RutePengirimanActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,39 +6,32 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.skripsi.API.APIRequestData;
 import com.example.skripsi.API.RetroServer;
-import com.example.skripsi.Activity.Koor.KoorKurir;
 import com.example.skripsi.Adapter.AdapterHitung;
 import com.example.skripsi.Model.HitungModel.DataHitungModel;
 import com.example.skripsi.Model.HitungModel.ResponHitungModel;
 import com.example.skripsi.R;
-import com.mapbox.geojson.Point;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CekHitung extends AppCompatActivity {
+public class CekHitungActivity extends AppCompatActivity {
     private RecyclerView rvCekHitung;
     private RecyclerView.Adapter adCekHitung;
     private RecyclerView.LayoutManager lmCekHitung;
-    private int[] idPengiriman;
     private List<DataHitungModel> listLatLong = new ArrayList<>();
-    private Double[] lat, longi;
     private Button btnCek;
     private final List<Integer> listSubtour = new ArrayList<>();
 
@@ -58,7 +51,7 @@ public class CekHitung extends AppCompatActivity {
         btnCek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CekHitung.this, TabelHitungActivity.class);
+                Intent intent = new Intent(CekHitungActivity.this, TabelHitungActivity.class);
                 Bundle args = new Bundle();
                 args.putSerializable("latlng", (Serializable) listLatLong);
                 args.putSerializable("haversine", (Serializable) listHaversine);
@@ -110,14 +103,14 @@ public class CekHitung extends AppCompatActivity {
                 listSubtour.forEach(sub -> {
                     listLatLong.add(dataHitungList.get(sub));
                 });
-                adCekHitung = new AdapterHitung(CekHitung.this, listLatLong.subList(1, listLatLong.size()));
+                adCekHitung = new AdapterHitung(CekHitungActivity.this, listLatLong.subList(1, listLatLong.size()));
                 rvCekHitung.setAdapter(adCekHitung);
                 adCekHitung.notifyDataSetChanged();
             }
 
             @Override
             public void onFailure(Call<ResponHitungModel> call, Throwable t) {
-                Toast.makeText(CekHitung.this, "Gagal menghubungi server!"+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(CekHitungActivity.this, "Gagal menghubungi server!"+t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

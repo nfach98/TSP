@@ -16,7 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.skripsi.API.APIRequestData;
 import com.example.skripsi.API.RetroServer;
-import com.example.skripsi.Activity.DataKurirActivity;
+import com.example.skripsi.Activity.KurirActivity.AturPengirimanKurirActivity;
+import com.example.skripsi.Activity.KurirActivity.DataKurirActivity;
 import com.example.skripsi.Activity.UbahDataKurirActivity;
 import com.example.skripsi.Model.DataKurirModel.DataModel;
 import com.example.skripsi.Model.DataKurirModel.ResponModel;
@@ -99,11 +100,18 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
 
                         }
                     });
-
+                    dialogPesan.setNeutralButton("Atur Rute",  new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent(ctx, AturPengirimanKurirActivity.class);
+                            intent.putExtra("id_kurir", idKurir);
+                            ctx.startActivity(intent);
+                            dialogInterface.dismiss();
+                        }
+                    });
                     dialogPesan.setNegativeButton("Ubah", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-
                             getData();
                             dialogInterface.dismiss();
                         }
@@ -150,9 +158,6 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
                     String varNamaKurir = listKurir.get(0).getName();
                     String varAlamat = listKurir.get(0).getAddress();
                     String varTelp = listKurir.get(0).getNo();
-
-
-                   // Toast.makeText(ctx, "Kode : "+kode+" | Pesan : "+pesan+" | Data : "+varIdKurir+" | "+varNamaKurir+" | "+varAlamat+" | "+varTelp, Toast.LENGTH_SHORT).show();
 
                     Intent kirim = new Intent(ctx, UbahDataKurirActivity.class);
                     kirim.putExtra("xId", varIdKurir);

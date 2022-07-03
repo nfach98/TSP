@@ -7,9 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.skripsi.Activity.Koor.AturPengirimanActivity.AturPengirimanActivity;
-import com.example.skripsi.Activity.DataKurirActivity;
-import com.example.skripsi.Activity.NgitungActivity.CekHitung;
+import com.example.skripsi.Activity.KurirActivity.DataKurirActivity;
+import com.example.skripsi.Activity.Koor.RutePengirimanActivity.CekHitungActivity;
 import com.example.skripsi.Activity.PengirimanActivity.DataPengiriman;
 import com.example.skripsi.R;
 
@@ -42,7 +41,7 @@ public class KoorKurir extends AppCompatActivity {
         cardRutePengiriman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(KoorKurir.this, CekHitung.class));
+                startActivity(new Intent(KoorKurir.this, CekHitungActivity.class));
             }
         });
     }
