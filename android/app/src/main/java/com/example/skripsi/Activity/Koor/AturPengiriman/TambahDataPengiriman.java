@@ -1,4 +1,4 @@
-package com.example.skripsi.Activity.PengirimanActivity;
+package com.example.skripsi.Activity.Koor.AturPengiriman;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;

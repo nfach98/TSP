@@ -7,12 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.skripsi.Activity.KurirActivity.DataKurirActivity;
-import com.example.skripsi.Activity.Koor.RutePengirimanActivity.CekHitungActivity;
-import com.example.skripsi.Activity.PengirimanActivity.DataPengiriman;
+import com.example.skripsi.Activity.Koor.DaftarKurir.DataKurirActivity;
+import com.example.skripsi.Activity.Koor.RutePengiriman.CekHitungActivity;
+import com.example.skripsi.Activity.Koor.AturPengiriman.DataPengirimanActivity;
 import com.example.skripsi.R;
 
-public class KoorKurir extends AppCompatActivity {
+public class KoorKurirActivity extends AppCompatActivity {
 
     CardView cardAturPengiriman, cardDaftarKurir, cardRutePengiriman;
 
@@ -27,21 +27,21 @@ public class KoorKurir extends AppCompatActivity {
         cardAturPengiriman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(KoorKurir.this, DataPengiriman.class));
+                startActivity(new Intent(KoorKurirActivity.this, DataPengirimanActivity.class));
             }
         });
 
         cardDaftarKurir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(KoorKurir.this, DataKurirActivity.class));
+                startActivity(new Intent(KoorKurirActivity.this, DataKurirActivity.class));
             }
         });
 
         cardRutePengiriman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(KoorKurir.this, CekHitungActivity.class));
+                startActivity(new Intent(KoorKurirActivity.this, CekHitungActivity.class));
             }
         });
     }

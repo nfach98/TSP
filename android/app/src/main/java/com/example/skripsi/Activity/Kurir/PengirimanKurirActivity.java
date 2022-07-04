@@ -1,4 +1,4 @@
-package com.example.skripsi.Activity.KurirActivity;
+package com.example.skripsi.Activity.Kurir;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,18 +7,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.skripsi.API.APIRequestData;
 import com.example.skripsi.API.RetroServer;
-import com.example.skripsi.Activity.PengirimanActivity.DataPengiriman;
+import com.example.skripsi.Activity.Koor.RutePengiriman.TabelHitungActivity;
 import com.example.skripsi.Adapter.AdapterPengirimanKurir;
-import com.example.skripsi.Model.HitungModel.DataHitungModel;
 import com.example.skripsi.Model.PengirimanModel.DataPengirimanModel;
 import com.example.skripsi.Model.PengirimanModel.ResponPengirimanModel;
 import com.example.skripsi.OnClickListener;
 import com.example.skripsi.R;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -31,7 +33,9 @@ import retrofit2.Response;
 public class PengirimanKurirActivity extends AppCompatActivity {
     private TextView tvTotal, tvJarak;
     private RecyclerView rvPengiriman;
+    private Button btnCek;
 
+    private String idKurir;
     private final double[] latLngS = new double[]{-7.32056, 112.7099};
     private List<DataPengirimanModel> listLatLong = new ArrayList<>();
     private final List<Integer> listSubtour = new ArrayList<>();
@@ -43,23 +47,44 @@ public class PengirimanKurirActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pengiriman_kurir);
 
+        idKurir = getIntent().getStringExtra("id_kurir");
         tvTotal = findViewById(R.id.tvTotal);
         tvJarak = findViewById(R.id.tvJarak);
         rvPengiriman = findViewById(R.id.rvLatLong);
+        btnCek = findViewById(R.id.buttonCheck);
         rvPengiriman.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-
         loadData();
+
+        btnCek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!listSubtour.isEmpty() && !listHaversine.isEmpty()) {
+                    Intent intent = new Intent(PengirimanKurirActivity.this, TabelHitungActivity.class);
+                    Bundle args = new Bundle();
+                    args.putSerializable("latlng", (Serializable) listLatLong);
+                    args.putSerializable("haversine", (Serializable) listHaversine);
+                    intent.putExtra("bundle", args);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     private void loadData() {
         APIRequestData ardDAta = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ResponPengirimanModel> tampilHitung = ardDAta.ardRetrievePengiriman();
+        Call<ResponPengirimanModel> tampilHitung = ardDAta.ardRetrievePengirimanKurir(idKurir);
 
         tampilHitung.enqueue(new Callback<ResponPengirimanModel>() {
             @Override
             public void onResponse(Call<ResponPengirimanModel> call, Response<ResponPengirimanModel> response) {
                 assert response.body() != null;
                 List<DataPengirimanModel> dataHitungList = response.body().getData();
+                DataPengirimanModel dataS = new DataPengirimanModel();
+                dataS.setId(0);
+                dataS.setLatitude(latLngS[0]);
+                dataS.setLongitude(latLngS[1]);
+                dataHitungList.add(0, dataS);
+
                 dataHitungList.forEach((dat -> {
                     dataHitungList.forEach((dat2 -> {
                         Double dist = haversine(dat.getLatitude(), dat.getLongitude(), dat2.getLatitude(), dat2.getLongitude());
@@ -99,7 +124,7 @@ public class PengirimanKurirActivity extends AppCompatActivity {
                 adCekHitung.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(Object... data) {
-                    DataPengirimanModel dhm = (DataPengirimanModel) data[1];
+                    DataPengirimanModel dhm = (DataPengirimanModel) data[0];
                     Intent intent = new Intent(PengirimanKurirActivity.this, NavigasiKurirActivity.class);
                     Bundle args = new Bundle();
                     int idx = dataHitungList.indexOf(dhm);

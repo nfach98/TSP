@@ -2,7 +2,6 @@ package com.example.skripsi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,10 +10,6 @@ import android.widget.Toast;
 
 import com.example.skripsi.API.APIRequestData;
 import com.example.skripsi.API.RetroServer;
-import com.example.skripsi.Activity.AdminActivity;
-import com.example.skripsi.Activity.TambahDataKurirActivity;
-import com.example.skripsi.Activity.UbahDataKurirActivity;
-import com.example.skripsi.Model.DataKurirModel.ResponModel;
 import com.example.skripsi.Model.LoginModel.ResponUserModel;
 
 import retrofit2.Call;

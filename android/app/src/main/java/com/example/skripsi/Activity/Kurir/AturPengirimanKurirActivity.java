@@ -1,4 +1,4 @@
-package com.example.skripsi.Activity.KurirActivity;
+package com.example.skripsi.Activity.Kurir;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

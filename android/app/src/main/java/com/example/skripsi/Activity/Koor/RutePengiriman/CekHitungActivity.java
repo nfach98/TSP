@@ -1,4 +1,4 @@
-package com.example.skripsi.Activity.Koor.RutePengirimanActivity;
+package com.example.skripsi.Activity.Koor.RutePengiriman;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

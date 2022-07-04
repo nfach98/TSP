@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.KurirActivity.PengirimanKurirActivity">
+    tools:context=".Activity.Kurir.PengirimanKurirActivity">
 
     <include
         android:id="@+id/toolbar_hasil"
@@ -44,6 +44,16 @@
         android:layout_marginRight="8dp"
         tools:listitem="@layout/card_latlong"
         app:layout_constraintTop_toBottomOf="@id/layoutNoted"
+        app:layout_constraintBottom_toTopOf="@id/buttonCheck"/>
+
+    <Button
+        android:id="@+id/buttonCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Detail Perhitungan"
+        android:textAllCaps="false"
+        app:iconTint="#0924BA"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

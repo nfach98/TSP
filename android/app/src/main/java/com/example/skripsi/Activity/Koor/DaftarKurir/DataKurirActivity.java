@@ -1,4 +1,4 @@
-package com.example.skripsi.Activity.KurirActivity;
+package com.example.skripsi.Activity.Koor.DaftarKurir;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import com.example.skripsi.API.APIRequestData;
 import com.example.skripsi.API.RetroServer;
-import com.example.skripsi.Activity.TambahDataKurirActivity;
 import com.example.skripsi.Adapter.AdapterData;
 import com.example.skripsi.Model.DataKurirModel.DataModel;
 import com.example.skripsi.Model.DataKurirModel.ResponModel;

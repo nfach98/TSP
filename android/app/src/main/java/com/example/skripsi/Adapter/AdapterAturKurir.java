@@ -1,30 +1,20 @@
 package com.example.skripsi.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.skripsi.API.APIRequestData;
-import com.example.skripsi.API.RetroServer;
-import com.example.skripsi.Activity.PengirimanActivity.UbahDataPengiriman;
 import com.example.skripsi.Model.PengirimanModel.DataPengirimanModel;
-import com.example.skripsi.Model.PengirimanModel.ResponPengirimanModel;
 import com.example.skripsi.OnClickListener;
 import com.example.skripsi.R;
 
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class AdapterAturKurir extends RecyclerView.Adapter<AdapterAturKurir.HolderAturKurir> {
     private Context ctx;

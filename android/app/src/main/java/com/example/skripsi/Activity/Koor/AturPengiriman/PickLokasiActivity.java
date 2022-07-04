@@ -1,4 +1,4 @@
-package com.example.skripsi.Activity.PengirimanActivity;
+package com.example.skripsi.Activity.Koor.AturPengiriman;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,7 +26,6 @@ import com.mapbox.maps.MapView;
 import com.mapbox.maps.MapboxMap;
 import com.mapbox.maps.extension.observable.eventdata.CameraChangedEventData;
 import com.mapbox.maps.plugin.delegates.listeners.OnCameraChangeListener;
-import com.mapbox.maps.plugin.locationcomponent.LocationComponentPlugin;
 
 import org.json.JSONArray;
 import org.json.JSONException;

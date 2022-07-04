@@ -1,6 +1,8 @@
 package com.example.skripsi.Model.PengirimanModel;
 
-public class DataPengirimanModel {
+import java.io.Serializable;
+
+public class DataPengirimanModel implements Serializable {
     private int id;
     private String nama, alamat;
     private Double latitude, longitude;
