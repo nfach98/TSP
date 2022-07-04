@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.skripsi.API.APIRequestData;
 import com.example.skripsi.API.RetroServer;
-import com.example.skripsi.Activity.KurirActivity.AturPengirimanKurirActivity;
-import com.example.skripsi.Activity.KurirActivity.DataKurirActivity;
-import com.example.skripsi.Activity.UbahDataKurirActivity;
+import com.example.skripsi.Activity.Kurir.AturPengirimanKurirActivity;
+import com.example.skripsi.Activity.Koor.DaftarKurir.DataKurirActivity;
+import com.example.skripsi.Activity.Koor.DaftarKurir.UbahDataKurirActivity;
 import com.example.skripsi.Model.DataKurirModel.DataModel;
 import com.example.skripsi.Model.DataKurirModel.ResponModel;
 import com.example.skripsi.R;

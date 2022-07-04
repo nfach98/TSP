@@ -15,42 +15,33 @@
         android:theme="@style/Theme.Skripsi"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name=".Activity.KurirActivity.AturPengirimanKurirActivity"
+            android:name=".Activity.Kurir.AturPengirimanKurirActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.PengirimanActivity.PickLokasiActivity"
+            android:name=".Activity.Koor.AturPengiriman.PickLokasiActivity"
             android:exported="true" >
         </activity>
         <activity
-            android:name=".Activity.KurirActivity.NavigasiKurirActivity"
+            android:name=".Activity.Kurir.NavigasiKurirActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" />
         <activity
-            android:name=".Activity.KurirActivity.MapKurirActivity"
+            android:name=".Activity.Kurir.MapKurirActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" />
         <activity
-            android:name=".Activity.KurirActivity.PengirimanKurirActivity"
+            android:name=".Activity.Kurir.PengirimanKurirActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" >
         </activity>
         <activity
-            android:name=".Activity.Koor.RutePengirimanActivity.DetailPerhitunganActivity"
+            android:name=".Activity.Koor.RutePengiriman.DetailPerhitunganActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.Koor.RutePengirimanActivity.RutePengirimanActivity"
+            android:name=".Activity.Koor.RutePengiriman.RutePengirimanActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.Koor.AturPengirimanActivity.CekPengirimanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.Koor.AturPengirimanActivity.AddPengirimanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.Koor.AturPengirimanActivity.AturPengirimanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.Koor.KoorKurir"
+            android:name=".Activity.Koor.KoorKurirActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" >
             <intent-filter>
@@ -60,37 +51,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.Koor.RutePengirimanActivity.CekHitungActivity"
+            android:name=".Activity.Koor.RutePengiriman.CekHitungActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar.TidakAdaActionBar" >
         </activity>
         <activity
-            android:name=".Activity.PengirimanActivity.UbahDataPengiriman"
+            android:name=".Activity.Koor.AturPengiriman.UbahDataPengiriman"
             android:exported="false" />
         <activity
-            android:name=".Activity.Koor.RutePengirimanActivity.TabelHitungActivity"
+            android:name=".Activity.Koor.RutePengiriman.TabelHitungActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.PengirimanActivity.TambahDataPengiriman"
+            android:name=".Activity.Koor.AturPengiriman.TambahDataPengiriman"
             android:exported="true"
             android:label="Data Pengiriman"
-            android:parentActivityName=".Activity.PengirimanActivity.DataPengiriman" >
+            android:parentActivityName=".Activity.Koor.AturPengiriman.DataPengirimanActivity" >
         </activity>
         <activity
-            android:name=".Activity.PengirimanActivity.DataPengiriman"
+            android:name=".Activity.Koor.AturPengiriman.DataPengirimanActivity"
             android:exported="true"
             android:label="Data Pengiriman" >
         </activity>
         <activity
-            android:name=".Activity.UbahDataKurirActivity"
+            android:name=".Activity.Koor.DaftarKurir.UbahDataKurirActivity"
             android:exported="false"
             android:label="Data Kurir"
-            android:parentActivityName=".Activity.KurirActivity.DataKurirActivity" />
+            android:parentActivityName=".Activity.Koor.DaftarKurir.DataKurirActivity" />
         <activity
-            android:name=".Activity.TambahDataKurirActivity"
+            android:name=".Activity.Koor.DaftarKurir.TambahDataKurirActivity"
             android:exported="false"
             android:label="Data Kurir"
-            android:parentActivityName=".Activity.KurirActivity.DataKurirActivity" />
+            android:parentActivityName=".Activity.Koor.DaftarKurir.DataKurirActivity" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="false" />
@@ -106,7 +97,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.KurirActivity.DataKurirActivity"
+            android:name=".Activity.Koor.DaftarKurir.DataKurirActivity"
             android:exported="false" />
     </application>
 

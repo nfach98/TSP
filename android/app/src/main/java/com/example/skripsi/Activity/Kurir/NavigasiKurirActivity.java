@@ -1,8 +1,7 @@
-package com.example.skripsi.Activity.KurirActivity;
+package com.example.skripsi.Activity.Kurir;
 
 import android.Manifest;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
@@ -18,7 +17,6 @@ import androidx.core.app.ActivityCompat;
 import com.example.skripsi.R;
 import com.mapbox.api.directions.v5.models.DirectionsRoute;
 import com.mapbox.api.directions.v5.models.RouteOptions;
-import com.mapbox.bindgen.Expected;
 import com.mapbox.geojson.Point;
 import com.mapbox.navigation.base.ExperimentalPreviewMapboxNavigationAPI;
 import com.mapbox.navigation.base.TimeFormat;
@@ -28,26 +26,21 @@ import com.mapbox.navigation.base.options.NavigationOptions;
 import com.mapbox.navigation.base.route.RouterCallback;
 import com.mapbox.navigation.base.route.RouterFailure;
 import com.mapbox.navigation.base.route.RouterOrigin;
-import com.mapbox.navigation.base.trip.model.RouteProgress;
 import com.mapbox.navigation.core.MapboxNavigation;
 import com.mapbox.navigation.core.MapboxNavigationProvider;
 import com.mapbox.navigation.core.formatter.MapboxDistanceFormatter;
 import com.mapbox.navigation.core.trip.session.RouteProgressObserver;
 import com.mapbox.navigation.dropin.NavigationView;
 import com.mapbox.navigation.ui.maneuver.api.MapboxManeuverApi;
-import com.mapbox.navigation.ui.maneuver.model.Maneuver;
-import com.mapbox.navigation.ui.maneuver.model.ManeuverError;
 import com.mapbox.navigation.ui.maneuver.view.MapboxManeuverView;
 import com.mapbox.navigation.ui.tripprogress.api.MapboxTripProgressApi;
 import com.mapbox.navigation.ui.tripprogress.model.DistanceRemainingFormatter;
 import com.mapbox.navigation.ui.tripprogress.model.EstimatedTimeToArrivalFormatter;
 import com.mapbox.navigation.ui.tripprogress.model.TripProgressUpdateFormatter;
-import com.mapbox.navigation.ui.tripprogress.model.TripProgressViewOptions;
 import com.mapbox.navigation.ui.tripprogress.view.MapboxTripProgressView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @OptIn(markerClass = ExperimentalPreviewMapboxNavigationAPI.class)
 public class NavigasiKurirActivity extends AppCompatActivity {

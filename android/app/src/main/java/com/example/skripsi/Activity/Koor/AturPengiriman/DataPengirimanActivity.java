@@ -1,4 +1,4 @@
-package com.example.skripsi.Activity.PengirimanActivity;
+package com.example.skripsi.Activity.Koor.AturPengiriman;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -24,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DataPengiriman extends AppCompatActivity {
+public class DataPengirimanActivity extends AppCompatActivity {
     private RecyclerView rvPengiriman;
     private RecyclerView.Adapter adPengiriman;
     private RecyclerView.LayoutManager lmPengiriman;
@@ -45,7 +45,7 @@ public class DataPengiriman extends AppCompatActivity {
         fabTambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DataPengiriman.this, TambahDataPengiriman.class));
+                startActivity(new Intent(DataPengirimanActivity.this, TambahDataPengiriman.class));
             }
         });
     }
@@ -60,11 +60,11 @@ public class DataPengiriman extends AppCompatActivity {
                 int kode = response.body().getKode();
                 String pesan = response.body().getPesan();
 
-                Toast.makeText(DataPengiriman.this, "Kode : "+kode+" | Pesan : "+pesan, Toast.LENGTH_SHORT).show();
+                Toast.makeText(DataPengirimanActivity.this, "Kode : "+kode+" | Pesan : "+pesan, Toast.LENGTH_SHORT).show();
 
                 listPengiriman = response.body().getData();
 
-                adPengiriman = new AdapterPengiriman(DataPengiriman.this, listPengiriman);
+                adPengiriman = new AdapterPengiriman(DataPengirimanActivity.this, listPengiriman);
                 rvPengiriman.setAdapter(adPengiriman);
                 adPengiriman.notifyDataSetChanged();
 
@@ -72,7 +72,7 @@ public class DataPengiriman extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponPengirimanModel> call, Throwable t) {
-                Toast.makeText(DataPengiriman.this, "Gagal menghubungi server!"+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(DataPengirimanActivity.this, "Gagal menghubungi server!"+t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

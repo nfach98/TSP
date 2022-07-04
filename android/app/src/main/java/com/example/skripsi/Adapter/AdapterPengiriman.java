@@ -16,8 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.skripsi.API.APIRequestData;
 import com.example.skripsi.API.RetroServer;
-import com.example.skripsi.Activity.PengirimanActivity.DataPengiriman;
-import com.example.skripsi.Activity.PengirimanActivity.UbahDataPengiriman;
+import com.example.skripsi.Activity.Koor.AturPengiriman.DataPengirimanActivity;
+import com.example.skripsi.Activity.Koor.AturPengiriman.UbahDataPengiriman;
 import com.example.skripsi.Model.PengirimanModel.DataPengirimanModel;
 import com.example.skripsi.Model.PengirimanModel.ResponPengirimanModel;
 import com.example.skripsi.R;
@@ -93,7 +93,7 @@ public class AdapterPengiriman extends RecyclerView.Adapter<AdapterPengiriman.Ho
                             hand.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    ((DataPengiriman) ctx).retrievePengiriman();
+                                    ((DataPengirimanActivity) ctx).retrievePengiriman();
                                 }
                             }, 1000);
                         }
