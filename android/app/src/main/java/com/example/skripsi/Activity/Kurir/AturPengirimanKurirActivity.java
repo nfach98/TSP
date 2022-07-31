@@ -1,5 +1,6 @@
 package com.example.skripsi.Activity.Kurir;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -58,25 +59,32 @@ public class AturPengirimanKurirActivity extends AppCompatActivity {
 
     public void retrievePengiriman() {
         APIRequestData ardDAta = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ResponPengirimanModel> tampilPengiriman = ardDAta.ardRetrievePengiriman();
+        Call<ResponPengirimanModel> tampilPengiriman = ardDAta.ardretriveAvailablePengiriman(idKurir);
 
         tampilPengiriman.enqueue(new Callback<ResponPengirimanModel>() {
             @Override
             public void onResponse(Call<ResponPengirimanModel> call, Response<ResponPengirimanModel> response) {
                 listPengiriman = response.body().getData();
-                adPengiriman = new AdapterAturKurir(AturPengirimanKurirActivity.this, listPengiriman);
+                listPengiriman.forEach(data -> {
+                    if (data.getIsSelected()) listSelected.add(data.getId());
+                });
+                adPengiriman = new AdapterAturKurir(
+                    AturPengirimanKurirActivity.this,
+                    listPengiriman,
+                    listSelected
+                );
                 adPengiriman.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(Object... data) {
-                    int index = Integer.parseInt(data[0].toString());
-                    ImageView ivCheck = (ImageView) data[1];
-                    if (listSelected.contains(index)) {
-                        listSelected.remove((Integer) index);
-                        ivCheck.setVisibility(View.GONE);
-                    } else {
-                        listSelected.add(index);
-                        ivCheck.setVisibility(View.VISIBLE);
-                    }
+                        int index = Integer.parseInt(data[0].toString());
+                        ImageView ivCheck = (ImageView) data[1];
+                        if (listSelected.contains(index)) {
+                            listSelected.remove((Integer) index);
+                            ivCheck.setVisibility(View.GONE);
+                        } else {
+                            listSelected.add(index);
+                            ivCheck.setVisibility(View.VISIBLE);
+                        }
                     }
                 });
                 rvPengiriman.setAdapter(adPengiriman);
@@ -96,14 +104,22 @@ public class AturPengirimanKurirActivity extends AppCompatActivity {
 
         callUpdateList.enqueue(new Callback<ResponModel>() {
             @Override
-            public void onResponse(Call<ResponModel> call, Response<ResponModel> response) {
-                int kode = response.body().getKode();
-                System.out.println(ids);
-                if (kode == 1) finish();
+            public void onResponse(@NonNull Call<ResponModel> call, @NonNull Response<ResponModel> response) {
+                if (response.body() != null) {
+                    int kode = response.body().getKode();
+                    if (kode == 1) {
+                        Toast.makeText(
+                            AturPengirimanKurirActivity.this,
+                            "Data pengiriman kurir berhasil tersimpan",
+                            Toast.LENGTH_SHORT
+                        ).show();
+                        finish();
+                    }
+                }
             }
 
             @Override
-            public void onFailure(Call<ResponModel> call, Throwable t) {
+            public void onFailure(@NonNull Call<ResponModel> call, @NonNull Throwable t) {
                 Toast.makeText(
                     AturPengirimanKurirActivity.this,
                     t.getMessage(),

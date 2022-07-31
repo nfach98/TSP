@@ -64,7 +64,12 @@ public interface APIRequestData {
 
     @GET("dataPengiriman/retrivePengirimanKurir.php")
     Call<ResponPengirimanModel> ardRetrievePengirimanKurir(
-            @Query("id_kurir") String idKurir
+        @Query("id_kurir") String idKurir
+    );
+
+    @GET("dataPengiriman/retriveAvailablePengiriman.php")
+    Call<ResponPengirimanModel> ardretriveAvailablePengiriman(
+        @Query("id_kurir") String idKurir
     );
 
     @FormUrlEncoded
